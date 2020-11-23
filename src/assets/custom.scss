@@ -1,0 +1,21 @@
+/* Define overrides */
+
+// Bootstrap
+$font-family-sans-serif: 'Avenir Next', Helvetica, Arial, sans-serif;
+
+
+// BootstrapVue
+$bv-enable-table-stacked: false;
+$bv-enable-table-sticky: false;
+$bv-enable-tooltip-variants: false;
+$bv-enable-popover-variants: false;
+
+
+/* Import */
+@import './fonts.css';
+@import './themes.scss';
+@import '~bootstrap/scss/bootstrap.scss';
+@import '~bootstrap-vue/src/index.scss';
+
+/* Apply */
+@include themes_bg;
