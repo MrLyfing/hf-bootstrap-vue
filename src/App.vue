@@ -4,9 +4,13 @@
       <b-row>
         <b-col class="text-center">
           <b-dropdown text="Theme">
-            <b-dd-item-btn v-for="(t, i) in theme.options" :key="i"
-            :active="t === theme.selected" @click="switchTheme(t)">
-              {{t}}
+            <b-dd-item-btn
+              v-for="(t, i) in theme.options"
+              :key="i"
+              :active="t === theme.selected"
+              @click="switchTheme(t)"
+            >
+              {{ t }}
             </b-dd-item-btn>
           </b-dropdown>
         </b-col>
@@ -17,11 +21,13 @@
         <b-col>
           <b-card no-body class="m-4" bg-variant="dark" header="Buttons">
             <b-card-body class="text-center">
-              <b-button v-for="(v, i) in variants"
-              :key="i"
-              :variant="v.toLowerCase()"
-              class="m-3">
-                {{v}}
+              <b-button
+                v-for="(v, i) in variants"
+                :key="i"
+                :variant="v.toLowerCase()"
+                class="m-3"
+              >
+                {{ v }}
               </b-button>
             </b-card-body>
           </b-card>
@@ -34,25 +40,31 @@
 <script>
 export default {
   data() {
-    const themes = ['default', 'black', 'gray', 'white'].map(t => 'theme-' + t)
+    var themes = ['default', 'black', 'gray', 'white'].map((t) => 'theme-' + t)
     document.body.className = themes[0]
 
     return {
       theme: {
         selected: themes[0],
-        options: themes
+        options: themes,
       },
       variants: [
-        'Primary', 'Secondary', 'Success', 'Danger',
-        'Warning', 'Info', 'Light', 'Dark',
-      ]
+        'Primary',
+        'Secondary',
+        'Success',
+        'Danger',
+        'Warning',
+        'Info',
+        'Light',
+        'Dark',
+      ],
     }
   },
   methods: {
     switchTheme(theme) {
       this.theme.selected = theme
       document.body.className = theme
-    }
-  }
+    },
+  },
 }
 </script>
