@@ -1,7 +1,14 @@
+@import './hf-palette.scss';
+
 /* Define overrides */
 
 // Bootstrap
 $font-family-sans-serif: 'Avenir Next', Helvetica, Arial, sans-serif;
+
+$theme-colors: (
+  "primary": $hf-hero-blue,
+  "danger": $hf-coral
+);
 
 
 // BootstrapVue
@@ -16,6 +23,3 @@ $bv-enable-popover-variants: false;
 @import './themes.scss';
 @import '~bootstrap/scss/bootstrap.scss';
 @import '~bootstrap-vue/src/index.scss';
-
-/* Apply */
-@include themes_bg;
