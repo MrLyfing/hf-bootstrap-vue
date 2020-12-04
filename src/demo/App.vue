@@ -17,14 +17,14 @@
       </b-row>
 
       <b-row>
-        <b-col></b-col>
-        <b-col>
+        <b-col lg></b-col>
+        <b-col lg>
           <Buttons :variants="variants" />
         </b-col>
       </b-row>
       <b-row>
-        <b-col></b-col>
-        <b-col>
+        <b-col lg></b-col>
+        <b-col lg>
           <Tooltips />
         </b-col>
       </b-row>

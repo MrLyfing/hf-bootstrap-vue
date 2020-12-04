@@ -1,6 +1,8 @@
 # hf-bootstrap-vue
 
-## Project setup
+### [Demo](https://mrlyfing.github.io/hf-bootstrap-vue/)
+
+### Project setup
 ```
 npm install
 ```
@@ -13,6 +15,11 @@ npm run serve
 ### Compiles and minifies for production
 ```
 npm run build
+```
+
+### Builds and deploys demo app to GH Pages
+```
+npm run deploy
 ```
 
 ### Lints and fixes files
