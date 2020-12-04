@@ -19,18 +19,13 @@
       <b-row>
         <b-col></b-col>
         <b-col>
-          <b-card no-body class="m-4" bg-variant="dark" header="Buttons">
-            <b-card-body class="text-center">
-              <b-button
-                v-for="(v, i) in variants"
-                :key="i"
-                :variant="v.toLowerCase()"
-                class="m-3"
-              >
-                {{ v }}
-              </b-button>
-            </b-card-body>
-          </b-card>
+          <Buttons :variants="variants" />
+        </b-col>
+      </b-row>
+      <b-row>
+        <b-col></b-col>
+        <b-col>
+          <Tooltips />
         </b-col>
       </b-row>
     </b-container>
@@ -38,7 +33,15 @@
 </template>
 
 <script>
+import Buttons from './cards/Buttons.vue'
+import Tooltips from './cards/Tooltips.vue'
+
 export default {
+  components: {
+    Buttons,
+    Tooltips,
+  },
+
   data() {
     var themes = ['default', 'black', 'gray', 'white'].map((t) => 'theme-' + t)
     document.body.className = themes[0]

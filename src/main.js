@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import {BootstrapVue, BootstrapVueIcons} from 'bootstrap-vue'
-import App from './App.vue'
+import App from './demo/App.vue'
 
 import './assets/custom.scss'
 
